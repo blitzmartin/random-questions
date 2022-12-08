@@ -8,7 +8,7 @@ export default function Questions() {
   const [index, setIndex] = useState(0);
 
   const handleNext = () => {
-    setQuestions(questions.filter((q) => q !== index));
+    setQuestions(questions.filter((q, id) => id !== index));
     const randomNumber = Math.floor(Math.random() * (questions.length - 1));
     setIndex(randomNumber);
   };
