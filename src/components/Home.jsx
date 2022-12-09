@@ -15,7 +15,7 @@ export default function Home() {
   const toggleStart = () => {
     setStart(!start);
     setSubject(selectData);
- 
+    setSelectData("") 
   };
 
   return (
