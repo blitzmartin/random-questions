@@ -1,4 +1,3 @@
-import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
@@ -10,19 +9,13 @@ const style = {
 }
 
 
-export default function SelectLabels() {
-    const [age, setAge] = React.useState('');
-  
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
-  
+export default function SelectLabels({selectData, handleChange}) {
     return (
       <div>
         <FormControl sx={{ m: 1, minWidth: 120}} >
-        <FormHelperText style={{color: "white"}}>Select subject</FormHelperText>
+        <FormHelperText style={{color: "white"}}>Subject</FormHelperText>
           <Select
-            value={age}
+            value={selectData}
             onChange={handleChange}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
@@ -31,9 +24,9 @@ export default function SelectLabels() {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value="biology">Biology</MenuItem>
-            <MenuItem value="chemistry">Chemistry</MenuItem>
-            <MenuItem value="maths">Maths</MenuItem>
+            <MenuItem value="biology">biology</MenuItem>
+            <MenuItem value="chemistry">chemistry</MenuItem>
+            <MenuItem value="maths">maths</MenuItem>
           </Select>
         </FormControl>
       </div>

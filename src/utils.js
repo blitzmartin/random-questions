@@ -65,3 +65,84 @@ export const biology = [
     }
   ];
   
+  export const chemistry = [
+    {
+      id: 0,
+      question: "Click next to skip question and reset to start again"
+    },
+    {
+      id: 1,
+      question: "Struttura atomica della materia"
+    },
+    {
+      id: 2,
+      question: "Trasformazioni della materia e legami"
+    },
+    {
+      id: 3,
+      question: "Termodinamica e cinetica chimica"
+    },
+    {
+      id: 4,
+      question: "Reazioni chimiche"
+    },
+    {
+      id: 5,
+      question: "Tavola periodica degli elementi"
+    },
+    {
+      id: 6,
+      question: "Reazioni di ossidoriduzione"
+    },
+    {
+      id: 7,
+      question: "Legame ionico e legame covalente"
+    },
+  ];
+
+  export const maths = [
+    {
+      id: 0,
+      question: "Click next to skip question and reset to start again"
+    },
+    {
+      id: 1,
+      question: "Definizione di funzione"
+    },
+    {
+      id: 2,
+      question: "Definizione di limite"
+    },
+    {
+      id: 3,
+      question: "La funzione esponenziale"
+    },
+    {
+      id: 4,
+      question: "La funzione logaritmo"
+    },
+    {
+      id: 5,
+      question: "Le funzioni goniometriche"
+    },
+    {
+      id: 6,
+      question: "I punti di accumulazione"
+    },
+    {
+      id: 7,
+      question: "Equazioni di secondo grado"
+    },
+    {
+      id: 8,
+      question: "Disequazioni di secondo grado"
+    },
+    {
+      id: 9,
+      question: "Punto di massimo o minimo"
+    },
+    {
+      id: 10,
+      question: "Definizione derivata prima"
+    },
+  ];
