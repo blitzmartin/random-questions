@@ -1,4 +1,4 @@
-export const data = [
+export const biology = [
     {
       id: 0,
       question: "Click next to skip question and reset to start again"

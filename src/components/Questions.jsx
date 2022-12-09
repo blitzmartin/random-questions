@@ -1,10 +1,9 @@
-import { data } from "../utils";
 import { useState } from "react";
 import Question from "./Question";
 import Button from "./Button";
 
-export default function Questions() {
-  const [questions, setQuestions] = useState(data);
+export default function Questions({subject}) {
+  const [questions, setQuestions] = useState(subject);
   const [index, setIndex] = useState(0);
 
   const handleNext = () => {
