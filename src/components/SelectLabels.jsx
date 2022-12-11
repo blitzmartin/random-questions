@@ -27,6 +27,7 @@ export default function SelectLabels({selectData, handleChange}) {
             <MenuItem value="biology">biology</MenuItem>
             <MenuItem value="chemistry">chemistry</MenuItem>
             <MenuItem value="maths">maths</MenuItem>
+            <MenuItem value="custom">custom</MenuItem>
           </Select>
         </FormControl>
       </div>

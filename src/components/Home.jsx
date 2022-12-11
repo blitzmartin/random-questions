@@ -6,6 +6,7 @@ import CustomRound from "./CustomRound";
 
 export default function Home() {
   const [start, setStart] = useState(false);
+  const [isCustom, setIsCustom] = useState(false)
   const [selectData, setSelectData] = useState("")
   const [subject, setSubject] = useState("")
 
@@ -25,6 +26,8 @@ export default function Home() {
   const toggleStart = () => {
     if (!start && selectData === "") {
       alert('Please select one subject')
+    } else if(!start && selectData === "custom"){
+      setIsCustom(true)
     } else {
       setSubject(selectData);
       setSelectData("");
@@ -57,7 +60,7 @@ export default function Home() {
       }
       {start && <Questions subject={subject} />}
       <Button title={start ? "Reset" : "Start"} handleClick={toggleStart} />
-      <CustomRound input={input} setInput={setInput} handleSubmit={handleSubmit} />
+    {isCustom && <CustomRound input={input} setInput={setInput} handleSubmit={handleSubmit} />} 
     </div>
   );
 }
