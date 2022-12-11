@@ -2,11 +2,21 @@ import { useState } from "react";
 import SelectLabels from "./SelectLabels";
 import Button from "./Button.jsx";
 import Questions from "./Questions";
+import CustomRound from "./CustomRound";
 
 export default function Home() {
   const [start, setStart] = useState(false);
   const [selectData, setSelectData] = useState("")
   const [subject, setSubject] = useState("")
+
+  const [input, setInput] = useState("")
+  const [custom, setCustom] = useState([
+    {
+      id: 0,
+      question: "Click next to skip question and reset to start again"
+    }
+  ]);
+  const [nextId, setNextId] = useState(1)
 
   const handleChange = (event) => {
     setSelectData(event.target.value);
@@ -22,6 +32,21 @@ export default function Home() {
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('yeah!')
+    setCustom([
+      ...custom,
+      {
+        id: nextId,
+        question: input
+      }
+    ])
+    console.log(custom)
+    setInput("")
+    setNextId(nextId + 1)
+  }
+
   return (
     <div className="home-container">
       {!start &&
@@ -32,6 +57,7 @@ export default function Home() {
       }
       {start && <Questions subject={subject} />}
       <Button title={start ? "Reset" : "Start"} handleClick={toggleStart} />
+      <CustomRound input={input} setInput={setInput} handleSubmit={handleSubmit} />
     </div>
   );
 }
