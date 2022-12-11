@@ -27,7 +27,7 @@ export default function Questions({ subject }) {
   return (
     <div>
       {questions.length === 0 ? (
-        <h1>No more questions!</h1>
+        <h1>No questions!</h1>
       ) : (
         <div>
           <Question question={questions[index].question} />
