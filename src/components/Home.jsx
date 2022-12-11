@@ -12,11 +12,15 @@ export default function Home() {
     setSelectData(event.target.value);
   };
 
- const toggleStart = () => {
-        setSubject(selectData);
-        setSelectData("");
-        setStart(!start);
-    };
+  const toggleStart = () => {
+    if (!start && selectData === "") {
+      alert('Please select one subject')
+    } else {
+      setSubject(selectData);
+      setSelectData("");
+      setStart(!start);
+    }
+  };
 
   return (
     <div className="home-container">
